@@ -1,0 +1,320 @@
+@mixin useRem($design-size){
+  $device-size-list:$design-size,414px,412px,380px,375px,360px,320px;
+  @each $size in $device-size-list{
+    @media screen and (max-width:#{$size}) {
+      html{
+        font-size: 100px*$size/$design-size;
+      }
+    }
+  }
+}
+@include useRem(1080px);
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+ul,li{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+i{
+  font-style:normal;
+}
+@font-face {
+  font-family: "iconfont";
+  src:url(iconfont.woff);
+}
+.iconfont{
+  font-family: 'iconfont' !important;
+}
+.icon-xinxi:before { content: "\e630"; }
+.icon-comiiscaidan:before { content: "\e603"; }
+.icon-fanhui-copy:before { content: "\e600"; }
+.icon-tianjia:before { content: "\e622"; }
+.icon-xuanzhong:before { content: "\e739"; }
+.icon-yuyin:before { content: "\e627"; }
+.icon-more1170511easyiconnet:before { content: "\e60e"; }
+.icon-zhizhang5:before { content: "\e64f"; }
+.header{
+  height:1.32rem;
+  .inner {
+    height:0.56rem;
+    padding:0.38rem 0.46rem;
+    position:relative;
+    .item1 {
+      width:0.97rem;
+      height:0.56rem;
+      color:#bebdc3;
+      font-size:0.5rem;
+
+    }
+    .item2 {
+      height:0.56rem;
+      color:#000;
+      font-size:0.37rem;
+      position:absolute;
+      top:0.38rem;
+      left:1.9rem;
+      line-height:0.56rem;
+      font-family:'微软雅黑';
+    }
+    .item3 {
+      width:0.3rem;
+      height:0.56rem;
+      color: #bebdc3;
+      font-size:0.3rem;
+      position:absolute;
+      top:0.4rem;
+      left:2.88rem;
+      line-height:0.56rem;
+    }
+    .item4 {
+      width:3.04rem;
+      height:0.54rem;
+      border-top-radius: 2rem;
+      position:absolute;
+      top:0.38rem;
+      right:1.5rem;
+      .item4left {
+        width:1.51rem;
+        height:0.52rem;
+        border:1px solid #bebdc3;
+        position:absolute;
+        right:1.51rem;
+        color: #000;
+        background:#bebdc3;
+        font-size:0.3rem;
+        line-height:0.52rem;
+        text-align:center;
+      }
+      .item4right {
+        width:1.51rem;
+        height:0.52rem;
+        border:1px solid #bebdc3;
+        position:absolute;
+        right:0rem;
+        color:#000;
+        font-size:0.3rem;
+        line-height:0.52rem;
+        text-align:center;
+      }
+    }
+    .item5 {
+      width:0.52rem;
+      height:0.56rem;
+      font-size:0.52rem;
+      color:#bebdc3;
+      position:absolute;
+      top:0.38rem;
+      right:0.46rem;
+    }
+
+  }
+}
+.nav{
+  height:2.72rem;
+  .one{
+    height:1.24rem;
+    padding:0.73rem 0.45rem;
+    background:#a1e1fa;
+    .content{
+      width:100%;
+      height:1.24rem;
+      background:#f8fdfe;
+      border-radius:0.24rem;
+      position:relative;
+      .icon {
+        width:0.41rem;
+        height:1.24rem;
+        color: #bcbcbc;
+        font-size:0.41rem;
+        line-height:1.24rem;
+        position:absolute;
+        left:0.45rem;
+      }
+      .cont{
+        width:6rem;
+        height:1.24rem;
+        background:transparent;
+        border:none;
+        outline:none;
+        color:#bdc1c4;
+        font-size:0.4rem;
+        line-height:1.24rem;
+        position:absolute;
+        left:1.25rem;
+
+      }
+    }
+  }
+
+}
+.mid{
+  height:15.2rem;
+  background: #5c5c66;
+  position: relative;
+  /*background: url(1.jpg);
+  background-size: cover;*/
+  .title{
+    height: 0.72rem;
+    padding-left: 0.44rem;
+    box-sizing: content-box;
+    color:#babac4;
+    font-family: '微软雅黑', sans-serif;
+    padding-top: 0.22rem;
+    padding-bottom: 0.18rem;
+    line-height: 0.72rem;
+  }
+  .list{
+    background:#fff;
+    border-radius:0.2rem;
+    li{
+      height: 3.3rem;
+      border-bottom: 1px solid #d5d5d5;
+      overflow: hidden;
+      position: relative;
+      display: block;
+     .cicle{
+       width: 1.26rem;
+       height: 1.26rem;
+       border-radius: 50%;
+       background: #7c85fc;
+       position: absolute;
+       left: 0.4rem;
+       top:0.52rem;
+       font-size: 0.52rem;
+       color: #fff;
+       text-align: center;
+       line-height: 1.26rem;
+      }
+      .items,.inputs{
+        width:7.1rem;
+        height: 1rem;
+        line-height: 1rem;
+        position: absolute;
+        left: 2.06rem;
+        top:0.58rem;
+        font-size: 0.42rem;
+        color: #181818;
+        box-sizing: border-box;
+      }
+      .inputs{
+        /*outline: none;
+        border: none;*/
+        display: none;
+        z-index: 2;
+      }
+      .topicon {
+        width:0.5rem;
+        height:0.5rem;
+        color:#18181a;
+        font-size:0.5rem;
+        position:absolute;
+        top:0.88rem;
+        right:0.44rem;
+      }
+      .boticon {
+        width:0.32rem;
+        height:0.32rem;
+        color:#bcbccc;
+        font-size:0.32rem;
+        position:absolute;
+        right:0.56rem;
+        bottom:0.6rem;
+      }
+
+    }
+  }
+}
+.mid .list .ls.done::after{
+  content:'';
+  width: 7.1rem;
+  height: 1px;
+  background: #ccc;
+  position: absolute;
+  top: 1.1rem;
+  left:2.06rem;
+
+}
+.feichu{
+  animation:feichu .8s ease both;
+}
+@keyframes feichu{
+    0%{
+      transform: translate3d(0,0,0);
+    }
+  100%{
+    transform: translate3d(-100%,0,0);
+  }
+}
+.mid .bottom{
+  width: 1.52rem;
+  height:1.52rem;
+  position: absolute;
+  bottom:0.48rem;
+  right:0.68rem;
+  border-radius: 50%;
+  background: #ee5567;
+  color:#fff;
+  font-size:0.68rem;
+  line-height:1.52rem;
+  text-align:center;
+  i{
+    width:0.68rem;
+    height: 0.68rem;
+  }
+}
+.panduan{
+  width: 8.7rem;
+  height:3.3rem ;
+  border-radius: 0.2rem;
+  background: #fff;
+  color:#000;
+  display: none;
+  font-size: 1rem;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  margin: auto;
+  z-index: 3;
+  .wenzi{
+    margin-left: 1rem;
+    line-height: 2.1rem;
+  }
+  .btn{
+    height: 1.2rem;
+    font-size: 0.6rem;
+    border-top:1px solid #ccc;
+    box-sizing: border-box;
+    .fou{
+      width: 50%;
+      height: 100%;
+      float:left;
+      text-align: center;
+      line-height: 1.2rem;
+    }
+    .shi{
+      width: 50%;
+      height: 100%;
+      text-align: center;
+      line-height: 1.2rem;
+      background: #ff2435;
+      color:#fff;
+      float:left;
+    }
+  }
+}
+.mask{
+  width: 100%;
+  height: 19rem;
+  position: absolute;
+  left: 0;
+  top:0;
+  background: rgba(0,0,0,0.8);
+  z-index: 3;
+  display: none;
+}
